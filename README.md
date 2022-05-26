@@ -229,8 +229,8 @@ Der vollständige Quellcode ist unter [https://github.com/nicolaimainiero/stream
 
 [^1]: NDJSON [http://ndjson.org/](http://ndjson.org/)
 
-[^2] Java Flight Recorder [JFR](https://docs.oracle.com/en/java/java-components/jdk-mission-control/8/user-guide/using-jdk-flight-recorder.html)
+[^2]: Java Flight Recorder [JFR](https://docs.oracle.com/en/java/java-components/jdk-mission-control/8/user-guide/using-jdk-flight-recorder.html)
 
-[^3] Reactive Relational Database Connectivity [R2DBC](https://r2dbc.io/)
+[^3]: Reactive Relational Database Connectivity [R2DBC](https://r2dbc.io/)
 
-[^4] [Cassowary ](https://github.com/rogerwelin/cassowary) is a modern HTTP/S, intuitive & cross-platform load testing tool
+[^4]: [Cassowary ](https://github.com/rogerwelin/cassowary) is a modern HTTP/S, intuitive & cross-platform load testing tool
