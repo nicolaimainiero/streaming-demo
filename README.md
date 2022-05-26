@@ -73,9 +73,9 @@ Die Analyse der so gewonnenen Daten erfolgt dann in Mission Control. Damit kann 
 
 Bei der Analyse der JFR Aufzeichnungen fällt auf, dass sehr viel Speicher bei der Erzeugung der JSON Objekte verbraucht wird. Eine Möglichkeit dies zu verhindern, ist, mit dem Senden zu beginnen, sobald die ersten Daten von der Datenbank zur Verfügung stehen. Mit NDJSON [^1] gibt es ein JSON basiertes zeilenorientiertes Format. Zwei einfache Regeln beschreiben erläutern wie NDJSON zu verwenden ist:
 
-1. Das Zeilentrennzeichen ist '\n'.
+1. Das Zeilentrennzeichen ist `\n`.
 
-    Dies bedeutet, dass '\r\n' ebenfalls unterstützt wird, da Leerzeichen am Ende beim Parsen von JSON-Werten ignoriert werden.
+    Dies bedeutet, dass `\r\n` ebenfalls unterstützt wird, da Leerzeichen am Ende beim Parsen von JSON-Werten ignoriert werden.
 
 3. Jede Zeile ist ein gültiger JSON-Wert
 
