@@ -1,0 +1,11 @@
+version: "3"
+services:
+  stream-postgres:
+    image: postgres:14-alpine
+    container_name: streaming-db
+    environment:
+      POSTGRES_USER: stream
+      POSTGRES_PASSWORD: stream
+      POSTGRES_DB: stream-db
+    ports:
+      - '5432:5432'
