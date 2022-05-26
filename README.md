@@ -224,6 +224,7 @@ Mit dieser Lösung werden Maximal 240MB Heap benötigt, die commited size ist nu
 
 Die Kombination von reaktivem Datenbankzugriff und streamender Ausgabe an der HTTP Schnittstelle ermöglicht es umfangreiche Datensätze Speichereffizient auszuliefern. Bereits der Wechsel auf den reaktiven Datenbankzugriuff kann den Speicherverbrauch signifikant reduzieren.
 
+Der vollständige Quellcode ist unter [https://github.com/nicolaimainiero/streaming-demo](https://github.com/nicolaimainiero/streaming-demo) verfügbar.
 ## Referenzen
 
 [^1]: NDJSON [http://ndjson.org/](http://ndjson.org/)
