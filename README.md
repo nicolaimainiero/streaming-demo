@@ -53,7 +53,7 @@ Summary:
  DNS Lookup......................: 1.00ms
  Req/s...........................: 4.57
 ```
-Es wurde `cassowary` verwendet, um 500 Requests mit 20 gleichzeitigen Nutzern abzusenden. Das Verhalten des Heapspeichers ist folgendem Diagramm zu entnehmen. Das Maximum lag bei rund 1,38 Gb, die comitted size liegt bei rund dem doppelten.
+Es wurde `cassowary`[^4] verwendet, um 500 Requests mit 20 gleichzeitigen Nutzern abzusenden. Das Verhalten des Heapspeichers ist folgendem Diagramm zu entnehmen. Das Maximum lag bei rund 1,38 Gb, die comitted size liegt bei rund dem doppelten.
 
 ![Heap Basic Rest Endpoint](.images/basic-rest.png "Verbrauch des Heaps des Basic Rest Beispiels.")
 
@@ -152,7 +152,7 @@ Tatsächlich ist der Speicherverbrauch etwas höher, als bei der Variante, die a
 
 ## Reaktiver Datenbankzugriff
 
-Mit Reactive Relational Database Connectivity (R2DBC) gibt es ein Projekt, dass den Datenbankzugriff reaktiv macht. Für Spring Boot gibt es ein passendes Projekt, dass ein `ReactiveCrudRepository` zur Verfügung stellt, dass geeignete reaktive Methoden zum Datenbankzugriff bereitstellt. Die notwendigen Änderungen im Controller beschränken sich darauf, das `ReactiveCrudRepository` zu verwenden und den `Flux` entsprechend weiterzuverarbeiten. Die Aufbereitung der Daten können wir aus dem vorherigen Beispiel übernehmen.  
+Mit Reactive Relational Database Connectivity (R2DBC [^3]) gibt es ein Projekt, dass den Datenbankzugriff reaktiv macht. Für Spring Boot gibt es ein passendes Projekt, dass ein `ReactiveCrudRepository` zur Verfügung stellt, dass geeignete reaktive Methoden zum Datenbankzugriff bereitstellt. Die notwendigen Änderungen im Controller beschränken sich darauf, das `ReactiveCrudRepository` zu verwenden und den `Flux` entsprechend weiterzuverarbeiten. Die Aufbereitung der Daten können wir aus dem vorherigen Beispiel übernehmen.  
 
 ```java
 @RestController
@@ -225,6 +225,7 @@ Mit dieser Lösung werden Maximal 240MB Heap benötigt, die commited size ist nu
 Die Kombination von reaktivem Datenbankzugriff und streamender Ausgabe an der HTTP Schnittstelle ermöglicht es umfangreiche Datensätze Speichereffizient auszuliefern. Bereits der Wechsel auf den reaktiven Datenbankzugriuff kann den Speicherverbrauch signifikant reduzieren.
 
 Der vollständige Quellcode ist unter [https://github.com/nicolaimainiero/streaming-demo](https://github.com/nicolaimainiero/streaming-demo) verfügbar.
+
 ## Referenzen
 
 [^1]: NDJSON [http://ndjson.org/](http://ndjson.org/)
@@ -233,4 +234,4 @@ Der vollständige Quellcode ist unter [https://github.com/nicolaimainiero/stream
 
 [^3]: Reactive Relational Database Connectivity [R2DBC](https://r2dbc.io/)
 
-[^4]: [Cassowary ](https://github.com/rogerwelin/cassowary) is a modern HTTP/S, intuitive & cross-platform load testing tool
+[^4]: [Cassowary](https://github.com/rogerwelin/cassowary) is a modern HTTP/S, intuitive & cross-platform load testing tool
